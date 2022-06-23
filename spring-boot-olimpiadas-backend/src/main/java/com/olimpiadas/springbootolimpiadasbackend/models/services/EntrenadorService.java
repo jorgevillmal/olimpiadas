@@ -18,4 +18,21 @@ public class EntrenadorService implements  IEntrenadorService{
     public List<Entrenador> findAll(){
         return (List<Entrenador>) entrenadorDao.findAll();
     }
+
+    @Override
+    public Entrenador findById(Long id) {
+        return entrenadorDao.findById(id).orElse(null); // Busca entrenador por id y si no lo encuentrs
+        // regresa una excepcion
+    }
+
+    @Override
+    public Entrenador save(Entrenador entrenador) {
+        return entrenadorDao.save(entrenador); // Guarda un entrenador
+    }
+
+    @Override
+    public void delete(Long id) {
+
+        entrenadorDao.deleteById(id); // Salva un entrenador
+    }
 }

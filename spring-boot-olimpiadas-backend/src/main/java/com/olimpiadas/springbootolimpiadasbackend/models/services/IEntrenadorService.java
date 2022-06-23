@@ -9,4 +9,8 @@ public interface IEntrenadorService {
 
 
     public List<Entrenador> findAll();
+    public Entrenador findById(Long id); // Busco a un entrenador por id.
+    public Entrenador save(Entrenador entrnador); // Guardo un enetrenado en la base de datos.
+    public  void delete(Long id);// Borro un entrenador de la base de datos.
+
 }
