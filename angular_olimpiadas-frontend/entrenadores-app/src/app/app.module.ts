@@ -12,12 +12,15 @@ import {RouterModule, Routes} from "@angular/router";
 import {HttpClientModule} from '@angular/common/http';
 import { FormComponent } from './competidores/form.component';
 import {FormsModule} from "@angular/forms";
+import { LoginComponent } from './usuarios/login.component';
 
 const routes: Routes =[
   {path: '', redirectTo: './competidores', pathMatch: 'full'},
   {path: 'directivas', component: DirectivaComponent},
   {path: 'competidores', component: CompetidoresComponent},
   {path: 'competidores/form', component: FormComponent},
+  {path: 'competidores/form/:id', component: FormComponent},
+  {path: 'login', component: LoginComponent}
 ];
 
 @NgModule({
@@ -27,7 +30,8 @@ const routes: Routes =[
     FooterComponent,
     DirectivaComponent,
     CompetidoresComponent,
-    FormComponent
+    FormComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
