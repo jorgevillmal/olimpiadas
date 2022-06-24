@@ -13,6 +13,7 @@ import {HttpClientModule} from '@angular/common/http';
 import { FormComponent } from './competidores/form.component';
 import {FormsModule} from "@angular/forms";
 import { LoginComponent } from './usuarios/login.component';
+import {AuthService} from "./usuarios/auth.service";
 
 const routes: Routes =[
   {path: '', redirectTo: './competidores', pathMatch: 'full'},
